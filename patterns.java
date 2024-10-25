@@ -11,6 +11,7 @@ public class patterns { //   *****
            System.out.println();
         }
     }
+ // pattern 2
 //    *
 //    **
 //    ***
@@ -25,9 +26,29 @@ public class patterns { //   *****
             System.out.println();
         }
     }
+//    Pattern 3
+//        *
+//       **
+//      ***
+//     ****
+//    *****
+    public void pattern3(int n) {
+        for(int i = 0; i< n; i++){
+            for(int j = i; j < n ; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j <=i ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+        }
+
+
 
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern2(5);
+            p.pattern3(5);
     }
 }
