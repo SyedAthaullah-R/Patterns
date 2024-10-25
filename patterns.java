@@ -58,10 +58,25 @@ public class patterns { //   *****
             System.out.println();
         }
     }
-
-
+//Pattern 5
+//    *****
+//     ****
+//      ***
+//       **
+//        *
+    public void pattern5(int n) {
+        for(int i = 0; i< n; i++){
+            for(int j = 0; j <= i ; j++){
+                System.out.print(" ");
+            }
+            for(int j = i; j < n ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern4(5);
+            p.pattern5(5);
     }
 }
