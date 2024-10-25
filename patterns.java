@@ -44,11 +44,24 @@ public class patterns { //   *****
 
         }
         }
-
+//Pattern 4
+//    *****
+//    ****
+//    ***
+//    **
+//    *
+    public void pattern4(int n) {
+        for(int i = 0;i<n; i++){
+            for(int j = i; j < n  ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 
 
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern3(5);
+            p.pattern4(5);
     }
 }
