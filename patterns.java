@@ -75,8 +75,31 @@ public class patterns { //   *****
             System.out.println();
         }
     }
+//    Pattern 6
+//    ****
+//    *  *
+//    *  *
+//    ****
+    public void pattern6(int n) {
+        for (int i = 0; i < n; i++) {
+            if( i == 0 || i == n-1){
+                for (int j = 0; j < n; j++) {
+                    System.out.print("*");
+                }
+            }
+            else{
+                System.out.print("*");
+                for(int j = 0; j < n-2 ; j++){
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern5(5);
+            p.pattern6(5);
     }
 }
