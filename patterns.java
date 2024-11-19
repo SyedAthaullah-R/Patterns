@@ -314,9 +314,23 @@ public class patterns { //   *****
             System.out.println();
         }
     }
+        // Pattern 16
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+    public void pattern16(int n){
+        for(int i = 0; i<n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print(j+1);
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern15(5);
+            p.pattern16(5);
     }
 }
