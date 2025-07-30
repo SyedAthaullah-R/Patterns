@@ -396,8 +396,101 @@ public class patterns { //   *****
             System.out.println();
         }
     }
+    // Pattern 17
+    // 1
+    // 32
+    // 654
+    // 87
+    // 9
+    public void pattern17(int n){
+        int count = 1;
+        for(int i = 0; i <= n / 2; i++){
+            int end = count + i;
+            for(int j = end; j >= count; j--){
+                System.out.print(j);
+            }
+            count = end + 1;
+            System.out.println();
+        }
+        for(int i = (n / 2) + 1; i < n; i++){
+            int len = n - i;
+            int end = count + len - 1;
+            for(int j = end; j >= count; j--){
+                System.out.print(j);
+            }
+            count = end + 1;
+            System.out.println();
+        }
+    }
+    // Pattern 18
+    // 1
+    // 23
+    // 456
+    // 78910
+    public void pattern18(int n){
+        int count = 1;
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print(count++);
+            }
+            System.out.println();
+        }
+    }
+    // Pattern 19
+    // 10987
+    // 654
+    // 32
+    // 1
+    public void pattern19(int n){
+        int count = (n * (n + 1)) / 2;
+        for(int i = 0; i < n; i++){
+            for(int j = i; j < n; j++){
+                System.out.print(count--);
+            }
+            System.out.println();
+        }
+    }
+    // Pattern 20
+    // 10987
+    // 654
+    // 32
+    // 1
+    // 23
+    // 456
+    // 78910
+    public void pattern20(int n){
+        int count = (n * (n + 1)) / 2;
+        for(int i = 0; i < n; i++){
+            for(int j = i; j < n; j++){
+                System.out.print(count--);
+            }
+            System.out.println();
+        }
+        count += 2;
+        for(int i = 1; i < n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print(count++);
+            }
+            System.out.println();
+        }
+    }
+    // Pattern 21
+    // 1
+    // 21
+    // 321
+    // 4321
+    // 54321
+    public void pattern21(int n){
+        for(int i = 0; i < n; i++){
+            for(int j = i; j >= 0; j--){
+                System.out.print(j + 1);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.patternZOHO(5);
+            p.pattern21(5);
     }
 }
