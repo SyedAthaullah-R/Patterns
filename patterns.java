@@ -642,9 +642,57 @@ public class patterns { //   *****
             System.out.println();
         }
     }
+    // Pattern 27
+    // A                                                 A
+    // AB                                               BA
+    // ABC                                             CBA
+    // ABCD                                           DCBA
+    // ABCDE                                         EDCBA
+    // ABCDEF                                       FEDCBA
+    // ABCDEFG                                     GFEDCBA
+    // ABCDEFGH                                   HGFEDCBA
+    // ABCDEFGHI                                 IHGFEDCBA
+    // ABCDEFGHIJ                               JIHGFEDCBA
+    // ABCDEFGHIJK                             KJIHGFEDCBA
+    // ABCDEFGHIJKL                           LKJIHGFEDCBA
+    // ABCDEFGHIJKLM                         MLKJIHGFEDCBA
+    // ABCDEFGHIJKLMN                       NMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNO                     ONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOP                   PONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQ                 QPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQR               RQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRS             SRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRST           TSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTU         UTSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTUV       VUTSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTUVW     WVUTSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTUVWX   XWVUTSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTUVWXY YXWVUTSRQPONMLKJIHGFEDCBA
+    // ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONMLKJIHGFEDCBA
+    public void pattern27(int n){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print((char) (65 + j));
+            }
+            for(int j = 0; j < 2 * (n - i) - 3; j++){
+                System.out.print(" ");
+            }
+            if(i == n - 1){
+                for(int j = i - 1; j >= 0; j--){
+                    System.out.print((char) (65 + j));
+                }
+            }
+            else{
+                for(int j = i; j >= 0; j--){
+                    System.out.print((char) (65 + j));
+                }
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
             patterns p = new patterns();
-            p.pattern26(5);
+            p.pattern27(26);
     }
 }
